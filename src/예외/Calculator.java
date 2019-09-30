@@ -7,7 +7,7 @@ public class Calculator {
 	
 	if(result > 10000)
 		throw new 너무커서반환할수없는예외();
-	
+	//dfgdrgrgrg
 	return result;
 	}
 
