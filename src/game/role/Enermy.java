@@ -23,3 +23,9 @@ public class Enermy {
 		g.drawImage(eImg, ex, ey, roleCanvas);
 	}
 }
+
+//Ramdom rand = new Random();
+//x = rand.nextInt(400)-20;
+//y = -200;
+//
+//move(rand.nextInt(360),rand,nextInt(50)+200);

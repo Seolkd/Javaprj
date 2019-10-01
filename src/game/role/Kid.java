@@ -12,7 +12,9 @@ public class Kid {
 	private int vy;
 	
 	private int w;
-	private int h;	
+	private int h;
+	
+	private int speed = 5;
 	
 	private static final int OFFSET_LEFT;
 	private static final int OFFSET_TOP;
@@ -93,6 +95,11 @@ public class Kid {
 
 
 	
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+
 	public void stop(Direction direction) {
 		switch(direction) {
 		case LEFT:
