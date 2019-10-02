@@ -30,32 +30,7 @@ public class RoleCanvas extends Canvas implements MouseListener, KeyListener {
 		addMouseListener(this);
 		addKeyListener(this);
 
-		new Thread(() -> {
-			while (true) {
-				try {
-					bg.update();
-					kid.update();
-//					for (int i = 0; i < 100; i++) {
-//						if (missiles[i] != null) {
-//							missiles[i].update();
-//						}
-//					}
-//					for(Object o : missile) {
-//						((Missile)o).update();
-//					
-//					}
-//					for (int i = 0; i < missile.size(); i++) {
-//						(missile.get(i)).update();
-						for(Missile m : missile) m.update();
-//						((Missile)missile.get(i)).update();
-					
-					Thread.sleep(17);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				repaint();
-			}
-		}).start();
+	
 	}
 
 	@Override
@@ -138,6 +113,35 @@ public class RoleCanvas extends Canvas implements MouseListener, KeyListener {
 			kid.stop(Direction.DOWN);
 			break;
 		}
+	}
+	
+	public void start() {
+		new Thread(() -> {
+			while (true) {
+				try {
+					bg.update();
+					kid.update();
+//					for (int i = 0; i < 100; i++) {
+//						if (missiles[i] != null) {
+//							missiles[i].update();
+//						}
+//					}
+//					for(Object o : missile) {
+//						((Missile)o).update();
+//					
+//					}
+//					for (int i = 0; i < missile.size(); i++) {
+//						(missile.get(i)).update();
+						for(Missile m : missile) m.update();
+//						((Missile)missile.get(i)).update();
+					
+					Thread.sleep(17);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				repaint();
+			}
+		}).start();
 	}
 
 	@Override

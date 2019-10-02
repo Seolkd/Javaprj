@@ -8,7 +8,7 @@ import java.awt.Frame;
 
 public class GameFrame extends Frame {
 	private Canvas introCanvas;
-	private Canvas canvas;
+	private RoleCanvas canvas;
 
 	private static GameFrame frame;
 	public static GameFrame getInstance() {
@@ -22,6 +22,10 @@ public class GameFrame extends Frame {
 	public void change() {
 		remove(introCanvas);
 		add(canvas);
+		
+		revalidate(); //유효하게 다시 캔버스를 그려달라.
+		
+		canvas.start();
 		setVisible(true);
 		canvas.setFocusable(true);
 		canvas.requestFocus();
